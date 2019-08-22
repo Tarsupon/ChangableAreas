@@ -51,7 +51,7 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
 
   changeAreaOrientationToGorizontal(area: MidComponent) {
     area.width = window.innerWidth;
-    area.height = window.innerHeight / this.newAreas.length;
+    area.height = (window.innerHeight - this.newDeviders.first.nativeElement.clientHeight * this.newDeviders.length) / this.newAreas.length;
   }
 
   ngAfterViewInit(): void {
@@ -64,7 +64,7 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
           this.changeAreaOrientationToGorizontal(area);
         } else {
           area.height = window.innerHeight;
-          area.width = window.innerWidth / this.newAreas.length;
+          area.width = (window.innerWidth - this.newDeviders.length * this.newDeviders.first.nativeElement.clientWidth) / this.newAreas.length;
         }
       }
       );
