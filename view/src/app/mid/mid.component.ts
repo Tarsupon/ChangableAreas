@@ -11,6 +11,7 @@ export class MidComponent implements OnInit, AfterViewInit {
   midCont: ElementRef;
 
   @Input() width: number;
+  @Input() height: number;
 
   constructor() {
   }
@@ -22,6 +23,7 @@ export class MidComponent implements OnInit, AfterViewInit {
     fromEvent(window, 'resize')
       .subscribe((event) => {
         this.width = this.midCont.nativeElement.clientWidth;
+        this.height = this.midCont.nativeElement.clientHeight;
       });
   }
 }

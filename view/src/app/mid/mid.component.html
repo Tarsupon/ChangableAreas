@@ -1,6 +1,7 @@
-<div #mid [style.width.px]="width" class="midContainer">
-  <app-child>
-    <h3 #headerContent>Welcome!!</h3>
-  </app-child>
-  <p>{{width}}</p>
+<div #mid
+     [style.width.px]="width"
+     [style.height.px]="height"
+     class="midContainer">
+  <p>Width{{width}}</p>
+  <p>Height{{height}}</p>
 </div>

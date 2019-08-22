@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25415970-411a-454b-8d54-390981e4e811" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/devided/devided.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/devided/devided.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/devided/devided.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/devided/inject.directive.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/wrapper/wrapper.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/wrapper/wrapper.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/wrapper/wrapper.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/view/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/app/mid/mid.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/mid/mid.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/app/mid/mid.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/mid/mid.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/app/mid/mid.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/mid/mid.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,41 +21,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
+              <caret column="35" lean-forward="true" selection-start-column="35" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.css">
+        <entry file="file://$PROJECT_DIR$/view/src/app/mid/mid.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="51">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/comp-wrapper.module.ts">
+        <entry file="file://$PROJECT_DIR$/view/src/app/mid/mid.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+            <state relative-caret-position="34">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/src/app/mid/mid.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
               <folding>
-                <element signature="e#0#47#0" expanded="true" />
+                <element signature="e#0#95#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/comp-wrapper.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -71,29 +63,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state>
+              <caret column="32" selection-start-column="32" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/src/app/app.module.ts">
+        <entry file="file://$PROJECT_DIR$/view/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state>
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#0#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            <state relative-caret-position="306">
+              <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
               <folding>
                 <element signature="e#0#202#0" expanded="true" />
               </folding>
@@ -102,8 +93,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.ts">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -132,11 +145,14 @@
         <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.html" />
         <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.css" />
         <option value="$PROJECT_DIR$/view/src/app/wrapper/devided/devided.component.ts" />
+        <option value="$PROJECT_DIR$/view/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/comp-wrapper.module.ts" />
+        <option value="$PROJECT_DIR$/view/src/app/mid/mid.component.ts" />
+        <option value="$PROJECT_DIR$/view/src/app/mid/mid.component.scss" />
+        <option value="$PROJECT_DIR$/view/src/app/mid/mid.component.html" />
         <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.html" />
         <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.css" />
         <option value="$PROJECT_DIR$/view/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/view/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/comp-wrapper.module.ts" />
         <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts" />
       </list>
     </option>
@@ -199,6 +215,26 @@
               <item name="ChangableAreas" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChangableAreas" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="devided" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChangableAreas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChangableAreas" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChangableAreas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChangableAreas" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -256,15 +292,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566387221447</updated>
-      <workItem from="1566387225222" duration="10440000" />
+      <workItem from="1566387225222" duration="15685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10440000" />
+    <option name="totallyTimeSpent" value="15685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
@@ -328,15 +365,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/src/app/wrapper/devided/inject.directive.ts">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/src/app/mid/mid.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <folding>
-            <element signature="e#0#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/src/app/wrapper/index.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -443,31 +471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/src/app/wrapper/wrapper.component.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -498,13 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -532,12 +532,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts">
+    <entry file="file://$PROJECT_DIR$/view/src/app/mid/mid.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        <state relative-caret-position="285">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
-            <element signature="e#0#202#0" expanded="true" />
+            <element signature="e#0#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/src/app/mid/mid.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/src/app/mid/mid.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -545,7 +568,45 @@
     <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
+          <caret column="35" lean-forward="true" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#202#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

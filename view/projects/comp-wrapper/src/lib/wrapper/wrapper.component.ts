@@ -21,7 +21,8 @@ import { DevidedComponent } from '../devided/devided.component';
 export class WrapperComponent implements AfterViewInit, AfterContentInit {
   title = 'view';
   width: number = 0;
-  @Input() vertical: boolean;
+
+  @Input() gorizontal: boolean;
   @ViewChild('templ', { static: false, read: ViewContainerRef }) entry;
 
   @ContentChildren(MidComponent) areas: QueryList<MidComponent>;
@@ -32,9 +33,25 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
   constructor(private resolver: ComponentFactoryResolver) {
   }
 
-  createDevider() {
-    const factory = this.resolver.resolveComponentFactory(DevidedComponent);
-    this.entry.createComponent(factory);
+  // createDevider() {
+  //   const factory = this.resolver.resolveComponentFactory(DevidedComponent);
+  //   this.entry.createComponent(factory);
+  // }
+
+  changeDeviderOrientationToGorizontal(devider: ElementRef<any>) {
+    let deviderStyle = devider.nativeElement.style;
+    deviderStyle.width = '100%';
+    deviderStyle.height = '20px';
+  }
+  changeDeviderOrientationToVertical(devider: ElementRef<any>) {
+    let deviderStyle = devider.nativeElement.style;
+    deviderStyle.width = '20px';
+    deviderStyle.height = '100%';
+  }
+
+  changeAreaOrientationToGorizontal(area: MidComponent) {
+    area.width = window.innerWidth;
+    area.height = window.innerHeight / this.newAreas.length;
   }
 
   ngAfterViewInit(): void {
@@ -43,8 +60,13 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
     // })
     setTimeout(() => {
       this.newAreas.forEach((area: MidComponent) => {
+        if (this.gorizontal) {
+          this.changeAreaOrientationToGorizontal(area);
+        } else {
+          area.height = window.innerHeight;
           area.width = window.innerWidth / this.newAreas.length;
         }
+      }
       );
     });
 
@@ -52,9 +74,17 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
     const up$ = fromEvent(window, 'mouseup');
 
     this.newDeviders.forEach(devider => {
-      fromEvent(devider.nativeElement, 'mousedown').pipe(
-        mergeMap(down => move$.pipe(takeUntil(up$)))
-      ).subscribe((event: MouseEvent) => this.changeSizeUniversal(event.clientX, devider));
+      if (this.gorizontal) {
+        this.changeDeviderOrientationToGorizontal(devider);
+        fromEvent(devider.nativeElement, 'mousedown').pipe(
+          mergeMap(down => move$.pipe(takeUntil(up$)))
+        ).subscribe((event: MouseEvent) => this.changeHeight(event.clientY, devider));
+      } else {
+        this.changeDeviderOrientationToVertical(devider);
+        fromEvent(devider.nativeElement, 'mousedown').pipe(
+          mergeMap(down => move$.pipe(takeUntil(up$)))
+        ).subscribe((event: MouseEvent) => this.changeWidth(event.clientX, devider));
+      }
     });
   }
 
@@ -63,23 +93,42 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
     this.newDeviders = this.deviders;
   }
 
-  private changeSizeUniversal(clientX: number, devider: ElementRef<any>) {
+  private changeHeight(clientY: number, devider: ElementRef<any>) {
+    const index = this.newDeviders.toArray().indexOf(devider);
+    const beforeResizeHeightFirst = this.newAreas.toArray()[index].height;
+    const beforeResizeHeightSecond = this.newAreas.toArray()[index + 1].height;
+    const areas = this.newAreas.toArray();
+
+    if (index === 0) {
+      areas[index].height = clientY;
+      areas[index + 1].height = beforeResizeHeightFirst + beforeResizeHeightSecond - clientY;
+    } else {
+      let beforeCommonHeight: number = 0;
+      areas.filter(area => areas.indexOf(area) < index).forEach(area=> {
+        beforeCommonHeight = beforeCommonHeight + area.height;
+      });
+      areas[index].height = clientY - beforeCommonHeight;
+      areas[index + 1].height = beforeResizeHeightFirst + beforeResizeHeightSecond - areas[index].height;
+    }
+  }
+
+  private changeWidth(clientX: number, devider: ElementRef<any>) {
 
     const index = this.newDeviders.toArray().indexOf(devider);
     const beforeResizeWidthFirst = this.newAreas.toArray()[index].width;
     const beforeResizeWidthSecond = this.newAreas.toArray()[index + 1].width;
+    const areas = this.newAreas.toArray();
 
     if (index === 0) {
-      this.newAreas.toArray()[index].width = clientX;
-      this.newAreas.toArray()[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - clientX;
+      areas[index].width = clientX;
+      areas[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - clientX;
     } else {
       let beforeCommonWidth: number = 0;
-      this.newAreas.toArray()
-        .filter(area => this.newAreas.toArray().indexOf(area) < index).forEach(area=> {
+      areas.filter(area => areas.indexOf(area) < index).forEach(area=> {
         beforeCommonWidth = beforeCommonWidth + area.width;
       });
-      this.newAreas.toArray()[index].width = clientX - beforeCommonWidth;
-      this.newAreas.toArray()[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - this.newAreas.toArray()[index].width;
+      areas[index].width = clientX - beforeCommonWidth;
+      areas[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - areas[index].width;
     }
   }
 }
