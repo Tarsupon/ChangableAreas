@@ -18,6 +18,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "wrapper": [
+        "dist/wrapper"
+      ],
+      "wrapper/*": [
+        "dist/wrapper/*"
+      ],
+      "comp-wrapper": [
+        "dist/comp-wrapper"
+      ],
+      "comp-wrapper/*": [
+        "dist/comp-wrapper/*"
+      ]
+    }
   }
 }

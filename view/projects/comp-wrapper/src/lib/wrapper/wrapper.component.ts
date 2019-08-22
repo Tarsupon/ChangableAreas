@@ -1,28 +1,27 @@
 import {
   AfterContentInit,
   AfterViewInit,
-  Component,
-  ComponentFactoryResolver, ComponentRef, ContentChild, ContentChildren,
-  ElementRef,
-  OnInit,
-  QueryList, ViewChild,
-  ViewChildren, ViewContainerRef,
+  Component, ComponentFactoryResolver,
+  ContentChildren, ElementRef,
+  Input,
+  OnInit, QueryList,
+  ViewChild,
+  ViewContainerRef,
 } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { mergeMap, takeUntil } from 'rxjs/operators';
+import { MidComponent } from '../../../../../src/app/mid/mid.component';
 import { DevidedComponent } from '../devided/devided.component';
-import { InjectDirective } from '../devided/inject.directive';
-import { MidComponent } from '../mid/mid.component';
 
 @Component({
-  selector: 'app-wrapper',
+  selector: 'enl-wrapper',
   templateUrl: './wrapper.component.html',
-  styleUrls: ['./wrapper.component.scss']
+  styleUrls: ['./wrapper.component.css']
 })
 export class WrapperComponent implements AfterViewInit, AfterContentInit {
   title = 'view';
   width: number = 0;
-
+  @Input() vertical: boolean;
   @ViewChild('templ', { static: false, read: ViewContainerRef }) entry;
 
   @ContentChildren(MidComponent) areas: QueryList<MidComponent>;

@@ -119,6 +119,76 @@
           }
         }
       }
+    },
+    "wrapper": {
+      "projectType": "library",
+      "root": "projects/wrapper",
+      "sourceRoot": "projects/wrapper/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/wrapper/tsconfig.lib.json",
+            "project": "projects/wrapper/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/wrapper/src/test.ts",
+            "tsConfig": "projects/wrapper/tsconfig.spec.json",
+            "karmaConfig": "projects/wrapper/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/wrapper/tsconfig.lib.json",
+              "projects/wrapper/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "compWrapper": {
+      "projectType": "library",
+      "root": "projects/comp-wrapper",
+      "sourceRoot": "projects/comp-wrapper/src",
+      "prefix": "enl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/comp-wrapper/tsconfig.lib.json",
+            "project": "projects/comp-wrapper/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/comp-wrapper/src/test.ts",
+            "tsConfig": "projects/comp-wrapper/tsconfig.spec.json",
+            "karmaConfig": "projects/comp-wrapper/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/comp-wrapper/tsconfig.lib.json",
+              "projects/comp-wrapper/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "view"
 }
