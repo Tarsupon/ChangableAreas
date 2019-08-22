@@ -124,10 +124,10 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
       areas[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - clientX;
     } else {
       let beforeCommonWidth: number = 0;
-      areas.filter(area => areas.indexOf(area) < index).forEach(area=> {
+      areas.filter(area => areas.indexOf(area) < index).forEach(area => {
         beforeCommonWidth = beforeCommonWidth + area.width;
       });
-      areas[index].width = clientX - beforeCommonWidth;
+      areas[index].width = clientX - (index + 1) * this.newDeviders.first.nativeElement.clientWidth - beforeCommonWidth;
       areas[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - areas[index].width;
     }
   }

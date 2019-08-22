@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="25415970-411a-454b-8d54-390981e4e811" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/src/app/mid/mid.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/mid/mid.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/src/app/app.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="31" selection-start-column="31" selection-end-column="31" />
+              <caret column="32" selection-start-column="32" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="53" column="135" lean-forward="true" selection-start-line="53" selection-start-column="135" selection-end-line="53" selection-end-column="135" />
+            <state relative-caret-position="194">
+              <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
               <folding>
                 <element signature="e#0#202#0" expanded="true" />
               </folding>
@@ -91,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -147,8 +147,8 @@
         <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.html" />
         <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.css" />
         <option value="$PROJECT_DIR$/view/src/app/mid/mid.component.scss" />
-        <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts" />
         <option value="$PROJECT_DIR$/view/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts" />
       </list>
     </option>
   </component>
@@ -295,22 +295,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566387221447</updated>
-      <workItem from="1566387225222" duration="17241000" />
+      <workItem from="1566387225222" duration="26485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17241000" />
+    <option name="totallyTimeSpent" value="26485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.26020408" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.21768707" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32993197" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -582,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/src/app/mid/mid.component.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -596,20 +589,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts">
+    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/devided/devided.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="53" column="135" lean-forward="true" selection-start-line="53" selection-start-column="135" selection-end-line="53" selection-end-column="135" />
-          <folding>
-            <element signature="e#0#202#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/projects/comp-wrapper/src/lib/wrapper/wrapper.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#202#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
