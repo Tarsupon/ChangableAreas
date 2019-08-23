@@ -1,10 +1,10 @@
 import {
   AfterContentInit,
   AfterViewInit,
-  Component, ComponentFactoryResolver,
+  Component,
   ContentChildren, ElementRef,
   Input,
-  OnInit, QueryList,
+  QueryList,
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
@@ -20,31 +20,24 @@ import { DevidedComponent } from '../devided/devided.component';
 })
 export class WrapperComponent implements AfterViewInit, AfterContentInit {
   title = 'view';
-  width: number = 0;
+  width = 0;
 
-  @Input() gorizontal: boolean;
-  @ViewChild('templ', { static: false, read: ViewContainerRef }) entry;
+  @Input() horizontal: boolean;
+  @ViewChild('templ', { static: false, read: ViewContainerRef }) entry: any;
 
   @ContentChildren(MidComponent) areas: QueryList<MidComponent>;
   @ContentChildren(DevidedComponent, {read: ElementRef}) deviders: QueryList<ElementRef>;
 
   newAreas: QueryList<MidComponent>;
   newDeviders: QueryList<ElementRef>;
-  constructor(private resolver: ComponentFactoryResolver) {
-  }
-
-  // createDevider() {
-  //   const factory = this.resolver.resolveComponentFactory(DevidedComponent);
-  //   this.entry.createComponent(factory);
-  // }
 
   changeDeviderOrientationToGorizontal(devider: ElementRef<any>) {
-    let deviderStyle = devider.nativeElement.style;
+    const deviderStyle = devider.nativeElement.style;
     deviderStyle.width = '100%';
     deviderStyle.height = '20px';
   }
   changeDeviderOrientationToVertical(devider: ElementRef<any>) {
-    let deviderStyle = devider.nativeElement.style;
+    const deviderStyle = devider.nativeElement.style;
     deviderStyle.width = '20px';
     deviderStyle.height = '100%';
   }
@@ -55,16 +48,14 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
   }
 
   ngAfterViewInit(): void {
-    // this.newAreas.forEach(area => {
-    //   this.createDevider()
-    // })
     setTimeout(() => {
       this.newAreas.forEach((area: MidComponent) => {
-        if (this.gorizontal) {
+        if (this.horizontal) {
           this.changeAreaOrientationToGorizontal(area);
         } else {
           area.height = window.innerHeight;
-          area.width = (window.innerWidth - this.newDeviders.length * this.newDeviders.first.nativeElement.clientWidth) / this.newAreas.length;
+          area.width = (window.innerWidth - this.newDeviders.length
+            * this.newDeviders.first.nativeElement.clientWidth) / this.newAreas.length;
         }
       }
       );
@@ -74,7 +65,7 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
     const up$ = fromEvent(window, 'mouseup');
 
     this.newDeviders.forEach(devider => {
-      if (this.gorizontal) {
+      if (this.horizontal) {
         this.changeDeviderOrientationToGorizontal(devider);
         fromEvent(devider.nativeElement, 'mousedown').pipe(
           mergeMap(down => move$.pipe(takeUntil(up$)))
@@ -99,17 +90,20 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
     const beforeResizeHeightSecond = this.newAreas.toArray()[index + 1].height;
     const areas = this.newAreas.toArray();
 
-    if (index === 0) {
-      areas[index].height = clientY;
-      areas[index + 1].height = beforeResizeHeightFirst + beforeResizeHeightSecond - clientY;
-    } else {
-      let beforeCommonHeight: number = 0;
-      areas.filter(area => areas.indexOf(area) < index).forEach(area=> {
+    let beforeCommonHeight = 0;
+    areas.filter(area => areas.indexOf(area) < index).forEach(area => {
         beforeCommonHeight = beforeCommonHeight + area.height;
       });
-      areas[index].height = clientY - beforeCommonHeight;
-      areas[index + 1].height = beforeResizeHeightFirst + beforeResizeHeightSecond - areas[index].height;
-    }
+    let afterCommonHeight = 0;
+    areas.filter(area => areas.indexOf(area) > index + 1).forEach(area => {
+        afterCommonHeight = afterCommonHeight + area.height;
+      });
+    const reversY = window.innerHeight - clientY - (this.newDeviders.length - (index + 1))
+      * this.newDeviders.first.nativeElement.clientHeight;
+    if (beforeCommonHeight < clientY - (index + 1) * this.newDeviders.first.nativeElement.clientHeight && afterCommonHeight < reversY) {
+        areas[index].height = clientY - (index + 1) * this.newDeviders.first.nativeElement.clientHeight - beforeCommonHeight;
+        areas[index + 1].height = beforeResizeHeightFirst + beforeResizeHeightSecond - areas[index].height;
+      }
   }
 
   private changeWidth(clientX: number, devider: ElementRef<any>) {
@@ -119,16 +113,21 @@ export class WrapperComponent implements AfterViewInit, AfterContentInit {
     const beforeResizeWidthSecond = this.newAreas.toArray()[index + 1].width;
     const areas = this.newAreas.toArray();
 
-    if (index === 0) {
-      areas[index].width = clientX;
-      areas[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - clientX;
-    } else {
-      let beforeCommonWidth: number = 0;
-      areas.filter(area => areas.indexOf(area) < index).forEach(area => {
-        beforeCommonWidth = beforeCommonWidth + area.width;
-      });
-      areas[index].width = clientX - (index + 1) * this.newDeviders.first.nativeElement.clientWidth - beforeCommonWidth;
-      areas[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - areas[index].width;
-    }
+    let beforeCommonWidth = 0;
+    areas.filter(area => areas.indexOf(area) < index).forEach(area => {
+          beforeCommonWidth = beforeCommonWidth + area.width;
+        });
+    let afterCommonWidth = 0;
+    areas.filter(area => areas.indexOf(area) > index + 1).forEach(area => {
+          afterCommonWidth = afterCommonWidth + area.width;
+        });
+    const reversX = window.innerWidth - clientX - (this.newDeviders.length - (index + 1))
+      * this.newDeviders.first.nativeElement.clientWidth;
+    if (beforeCommonWidth < clientX - (index + 1) * this.newDeviders.first.nativeElement.clientWidth && afterCommonWidth < reversX) {
+          areas[index].width = clientX - (index + 1) * this.newDeviders.first.nativeElement.clientWidth - beforeCommonWidth;
+          areas[index + 1].width = beforeResizeWidthFirst + beforeResizeWidthSecond - areas[index].width;
+        }
+
+
   }
 }

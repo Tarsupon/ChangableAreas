@@ -9,7 +9,7 @@ export class ChildComponent {
 
   @ContentChild('headerContent', { static: false })
   header: ElementRef;
-  @ContentChildren(ChildComponent,{ descendants: true })
+  @ContentChildren(ChildComponent, { descendants: true })
   headers: QueryList<ChildComponent>;
 
   change() {

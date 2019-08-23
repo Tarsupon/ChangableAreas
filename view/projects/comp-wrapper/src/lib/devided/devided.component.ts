@@ -5,11 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './devided.component.html',
   styleUrls: ['./devided.component.css']
 })
-export class DevidedComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class DevidedComponent {
 }

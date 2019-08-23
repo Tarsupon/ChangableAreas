@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs';
 
 @Component({
@@ -6,18 +6,12 @@ import { fromEvent } from 'rxjs';
   templateUrl: './mid.component.html',
   styleUrls: ['./mid.component.scss']
 })
-export class MidComponent implements OnInit, AfterViewInit {
+export class MidComponent implements AfterViewInit {
   @ViewChild('mid', {static: false })
   midCont: ElementRef;
 
   @Input() width: number;
   @Input() height: number;
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
 
   ngAfterViewInit(): void {
     fromEvent(window, 'resize')
